@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "关于"
+title: "About"
 description: "你的博客描述 " 
 header-img: "img/green.jpg"
 ---
 
-这一页填写你的自我介绍。
+只会 hello world 的程序员。
 
 
 

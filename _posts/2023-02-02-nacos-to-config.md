@@ -3,7 +3,6 @@ layout: post
 title: Nacos 作为配置中心的使用
 date: 2023-02-02
 categories: blog
-tags: [标签一,标签二]
 description: 文章金句。
 ---
 

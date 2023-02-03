@@ -1,13 +1,13 @@
 # Site settings
 title: Hi，zlx # 你的博客名字，可以定义修订
 header-img: "img/head1.jpg"
-tagline: "cn"  
+tagline: "cn"
 description: "Hello World"  # 一句话描述你的博客
 baseurl: ""
 url: "http://cnfeat"  # 此处填写你的博客地址 
 
 # About/contact
-owner: 
+owner:
   name: "xuan" # 填写作者信息：名字
   email: 949503421@qq.com # 填写作者信息：邮箱
   bio: "你的博客描述" # 填写作者信息：博客描述
@@ -17,11 +17,11 @@ gavatar: img/head.png # 浏览器地址栏小图标，可自定义更改
 favicon: img/head.png # 浏览器地址栏小图标，可自定义更改
 
 douban_username:  # 你的豆瓣id
-twitter_username: 
-github_username: 
-facebook_username: 
-weibo_username: 
-zhihu_username: 
+twitter_username:
+github_username:
+facebook_username:
+weibo_username:
+zhihu_username:
 
 # Build settings  
 # use Github Flavored Markdown !important  
@@ -30,15 +30,14 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 paginate: 8
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+exclude: [ "less","node_modules","Gruntfile.js","package.json","README.md" ]
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: Asia/Shanghai
 
 # Defaults for posts
 defaults:
-  -
-    scope: 
+  - scope:
       path: ""
       type: "posts"
     values:
@@ -46,12 +45,13 @@ defaults:
       author: "xuan" # 你的名字
       header-img: "img/head1.jpg" # We don't want posts without a header image, that whould mean white on white
 
-# Comments 
-comments :
-  provider : disqus # 使用 disqus 评论模块，读者翻墙才能看见
-  duoshuo :
-    short_name: "disqus_bWK296Qq4R" # 填写你的 disqus id
-  disqus :
+# Comments
+disqus_username: "disqus_bWK296Qq4R"
+comments:
+  provider: disqus # 使用 disqus 评论模块，读者翻墙才能看见
+  #  duoshuo:
+  #    short_name: "disqus_bWK296Qq4R" # 填写你的 disqus id
+  disqus:
     short_name: "disqus_bWK296Qq4R" # 填写你的 disqus id
 
 # Analytics and webmaster tools stuff goes here

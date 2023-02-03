@@ -40,7 +40,7 @@ layout: default
 
                 {{ content }}
 
-                <hr>
+                <hr style="visibility: hidden;">
 
                 <ul class="pager">
                     {% if page.previous.url %}
@@ -55,45 +55,52 @@ layout: default
                     {% endif %}
                 </ul>
 
+                <hr style="visibility: hidden;">
+
                 <!-- Duoshuo Share start -->
-                <style>
-                    .ds-share{
-                        text-align: right;
-                    }
-                    
-                    @media only screen and (max-width: 700px) {
-                        .ds-share {
+<!--                <style>-->
+<!--                    .ds-share{-->
+<!--                        text-align: right;-->
+<!--                    }-->
+<!--                    -->
+<!--                    @media only screen and (max-width: 700px) {-->
+<!--                        .ds-share {-->
 
-                        }
-                    }
-                </style>
+<!--                        }-->
+<!--                    }-->
+<!--                </style>-->
 
-                <div class="ds-share"
-                    data-thread-key="{{page.id}}" data-title="{{page.title}}"
-                    data-images="{{ site.url }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"
-                    data-content="{{ content | strip_html | truncate:80 }} | Microdust:Azeril's blog"
-                    data-url="{{site.url}}{{page.url}}">
-                    <div class="ds-share-inline">
-                      <ul  class="ds-share-icons-16">
+<!--                <div class="ds-share"-->
+<!--                    data-thread-key="{{page.id}}" data-title="{{page.title}}"-->
+<!--                    data-images="{{ site.url }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"-->
+<!--                    data-content="{{ content | strip_html | truncate:80 }} | Microdust:Azeril's blog"-->
+<!--                    data-url="{{site.url}}{{page.url}}">-->
+<!--                    <div class="ds-share-inline">-->
+<!--                      <ul  class="ds-share-icons-16">-->
 
-                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-<!--                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>-->
-                      </ul>
-                      <div class="ds-share-icons-more">
-                      </div>
-                    </div>
-                <hr>
-                </div>
+<!--                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>-->
+<!--                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>-->
+<!--                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>-->
+<!--&lt;!&ndash;                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>&ndash;&gt;-->
+<!--                      </ul>-->
+<!--                      <div class="ds-share-icons-more">-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                <hr>-->
+<!--                </div>-->
                 <!-- Duoshuo Share end-->
 
 
                 <!-- 多说评论框 start -->
-                <div class="comment">
-                    <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}{{page.url}}"></div>
-                </div>
+<!--                <div class="comment">-->
+<!--                    <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}{{page.url}}"></div>-->
+<!--                </div>-->
                 <!-- 多说评论框 end -->
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
             </div>
         </div>
     </div>
@@ -102,18 +109,33 @@ layout: default
 
 
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<!--<script type="text/javascript">-->
+<!--var duoshuoQuery = {short_name:"cnfeat"};-->
+<!--    (function() {-->
+<!--        var ds = document.createElement('script');-->
+<!--        ds.type = 'text/javascript';ds.async = true;-->
+<!--        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';-->
+<!--        ds.charset = 'UTF-8';-->
+<!--        (document.getElementsByTagName('head')[0]-->
+<!--         || document.getElementsByTagName('body')[0]).appendChild(ds);-->
+<!--    })();-->
+<!--</script>-->
+<!-- 多说公共JS代码 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
-var duoshuoQuery = {short_name:"cnfeat"};
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus_username}}";
+    var disqus_identifier = "{{page.id}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
     (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- 多说公共JS代码 end -->
+<!-- disqus 公共JS代码 end -->
 
 <!-- async load function -->
 <script>

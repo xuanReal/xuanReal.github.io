@@ -4,11 +4,11 @@ layout: default
 
 <!-- Post Header -->
 <style type="text/css">
-    header.intro-header{
+    header.intro-header {
         background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
     }
 </style>
-<header class="intro-header" >
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -30,8 +30,6 @@ layout: default
 </header>
 
 
-
-
 <!-- Post Content -->
 <article>
     <div class="container">
@@ -45,12 +43,15 @@ layout: default
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"
+                           data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous
+                            Post</a>
                     </li>
                     {% endif %}
                     {% if page.next.url %}
                     <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip"
+                           data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -58,43 +59,43 @@ layout: default
                 <hr style="visibility: hidden;">
 
                 <!-- Duoshuo Share start -->
-<!--                <style>-->
-<!--                    .ds-share{-->
-<!--                        text-align: right;-->
-<!--                    }-->
-<!--                    -->
-<!--                    @media only screen and (max-width: 700px) {-->
-<!--                        .ds-share {-->
+                <!--                <style>-->
+                <!--                    .ds-share{-->
+                <!--                        text-align: right;-->
+                <!--                    }-->
+                <!--                    -->
+                <!--                    @media only screen and (max-width: 700px) {-->
+                <!--                        .ds-share {-->
 
-<!--                        }-->
-<!--                    }-->
-<!--                </style>-->
+                <!--                        }-->
+                <!--                    }-->
+                <!--                </style>-->
 
-<!--                <div class="ds-share"-->
-<!--                    data-thread-key="{{page.id}}" data-title="{{page.title}}"-->
-<!--                    data-images="{{ site.url }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"-->
-<!--                    data-content="{{ content | strip_html | truncate:80 }} | Microdust:Azeril's blog"-->
-<!--                    data-url="{{site.url}}{{page.url}}">-->
-<!--                    <div class="ds-share-inline">-->
-<!--                      <ul  class="ds-share-icons-16">-->
+                <!--                <div class="ds-share"-->
+                <!--                    data-thread-key="{{page.id}}" data-title="{{page.title}}"-->
+                <!--                    data-images="{{ site.url }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"-->
+                <!--                    data-content="{{ content | strip_html | truncate:80 }} | Microdust:Azeril's blog"-->
+                <!--                    data-url="{{site.url}}{{page.url}}">-->
+                <!--                    <div class="ds-share-inline">-->
+                <!--                      <ul  class="ds-share-icons-16">-->
 
-<!--                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>-->
-<!--                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>-->
-<!--                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>-->
-<!--&lt;!&ndash;                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>&ndash;&gt;-->
-<!--                      </ul>-->
-<!--                      <div class="ds-share-icons-more">-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                <hr>-->
-<!--                </div>-->
+                <!--                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>-->
+                <!--                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>-->
+                <!--                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>-->
+                <!--&lt;!&ndash;                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>&ndash;&gt;-->
+                <!--                      </ul>-->
+                <!--                      <div class="ds-share-icons-more">-->
+                <!--                      </div>-->
+                <!--                    </div>-->
+                <!--                <hr>-->
+                <!--                </div>-->
                 <!-- Duoshuo Share end-->
 
 
                 <!-- 多说评论框 start -->
-<!--                <div class="comment">-->
-<!--                    <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}{{page.url}}"></div>-->
-<!--                </div>-->
+                <!--                <div class="comment">-->
+                <!--                    <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}{{page.url}}"></div>-->
+                <!--                </div>-->
                 <!-- 多说评论框 end -->
                 <!-- disqus 评论框 start -->
                 <div class="comment">
@@ -105,7 +106,6 @@ layout: default
         </div>
     </div>
 </article>
-
 
 
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
@@ -129,9 +129,11 @@ layout: default
     var disqus_identifier = "{{page.id}}";
     var disqus_url = "{{site.url}}{{page.url}}";
 
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = (document.location.protocol === 'https:' ? 'https:' : 'http:') + 'disqus_bWK296Qq4R.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
@@ -140,22 +142,26 @@ layout: default
 <!-- async load function -->
 <script>
     function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) {
+            o.addEventListener('load', function (e) {
+                c(null, e);
+            }, false);
+        }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
-    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
         anchors.options = {
-          visible: 'always',
-          placement: 'right',
-          icon: ''
+            visible: 'always',
+            placement: 'right',
+            icon: ''
         };
         anchors.add().remove('.intro-header h1').remove('.subheading');
     })
@@ -163,11 +169,11 @@ layout: default
 <style>
     /* place left on bigger screen */
     @media all and (min-width: 800px) {
-        .anchorjs-link{
+        .anchorjs-link {
             position: absolute;
             left: -0.75em;
             font-size: 1.1em;
-            margin-top : -0.1em;
+            margin-top: -0.1em;
         }
     }
 </style>

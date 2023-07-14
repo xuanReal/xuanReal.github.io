@@ -1,3 +1,11 @@
+---
+layout: post
+title: 创建一个空对象占用多少个字节
+date: 2022-07-08
+categories: blog
+description: 文章金句。
+---
+
 Q：创建一个空对象占多少个字节
 
 A：占用16个字节（前提：64位 HotSpot 虚拟机，开启了指针压缩）

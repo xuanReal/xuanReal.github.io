@@ -1,3 +1,10 @@
+---
+layout: post
+title: Redis 一些很实用的场景
+date: 2022-12-06
+categories: blog
+description: 文章金句。
+---
 
 Redis 最最常用的就是用来做缓存了，但其实它还能在很多场景下使用。其每一种数据结构都有自己对应的用途。
 

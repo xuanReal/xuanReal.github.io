@@ -1,3 +1,11 @@
+---
+layout: post
+title: Redis 和它丰富的数据类型
+date: 2022-09-27
+categories: blog
+description: 文章金句。
+---
+
 Redis 是一款基于内存的高性能的 key-value 数据库。官方给的数据是：**读-110,000/s**、**写-81,000/s**.
 Redis 性能高的原因有很多方面，今天就从其底层丰富的数据结构进行分析。
 ### RedisObject
